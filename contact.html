@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MediBridge</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            margin: 0 auto;
+         }
+        .form-group {
+             margin-bottom: 15px;
+         }
+         label {
+             display: block;
+             margin-bottom: 5px;
+            }
+        input, textarea {
+             width: 100%;
+             padding: 8px;
+             box-sizing: border-box;
+             border: 1px solid #ccc;
+             border-radius: 4px;
+            }
+        button {
+             width: 100%;
+             padding: 10px;
+             background-color: #4CAF50;
+             color: white;
+             border: none;
+             border-radius: 4px;
+             cursor: pointer;
+            }
+        button:hover {
+             background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logop">
+            <img src="MediBridge.webp" alt="MediBridge Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="exitPopup" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <h2>Wait! Don't leave yet!</h2>
+          <p>Are you sure you dont want a hospital.</p>
+          <button onclick="closeWebsite()">Yes</button>
+          <button onclick="closePopup()">No</button>
+        </div>
+      </div>
+    <main>
+        <div id="exitPopup" class="popup">
+            <div class="popup-content">
+              <span class="close" onclick="closePopup()">&times;</span>
+              <h2>Wait! Don't leave yet!</h2>
+              <p>Are you sure you dont want a hospital.</p>
+              <button onclick="closeWebsite()">Yes</button>
+              <button onclick="closePopup()">No</button>
+            </div>
+        </div>
+        <h1>Contact Us</h1>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </main>
+    <footer>
+        <p>&copy; 2024 MediBridge. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+            s.addEventListener('load', function() {
+              myLandbot = new Landbot.Popup({
+                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2622464-1X8WRA8TFQBUXJPF/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+        </script>
+</body>
+</html>
